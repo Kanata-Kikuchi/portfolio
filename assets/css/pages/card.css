@@ -1,0 +1,323 @@
+.page-card {
+  min-height: 100vh;
+}
+
+/* 固定footer分の逃げ */
+.card-main {
+  padding-bottom: calc(var(--footer-bar-h) + 24px);
+}
+
+
+/* -------------------------
+  DESKTOP用ヘッダー
+------------------------- */
+
+.card-header {
+  display: none;
+}
+
+/* -------------------------
+  MOBILE用ヘッダー
+------------------------- */
+
+.card-hero {
+  display: grid;
+  align-items: stretch;
+  column-gap: 16px;
+
+  padding-top: calc(var(--safe-top) + 5vh);
+  padding-bottom: 6vw;
+}
+
+.card-hero__title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-hero__title {
+  display: inline-block;
+  white-space: nowrap;
+
+  font-size: clamp(16px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  line-height: 1;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* -------------------------
+  写真
+------------------------- */
+.card-hero__media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-hero__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.card-hero__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* -------------------------
+  LEFT版
+  左：タイトル
+  右：写真
+  回転：90
+------------------------- */
+
+.card-hero--left {
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.card-hero--left .card-hero__title-wrap {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-hero--left .card-hero__media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card-hero--left .card-hero__title {
+  transform: rotate(180deg);
+}
+
+
+/* -------------------------
+  RIGHT版
+  左：写真
+  右：タイトル
+  回転：270
+------------------------- */
+
+.card-hero--right {
+  grid-template-columns: 1fr 60px;
+  grid-template-rows: 1fr;
+}
+
+.card-hero--right .card-hero__media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-hero--right .card-hero__title-wrap {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card-hero--right .card-hero__title {
+  transform: rotate(0deg);
+}
+
+
+/* -------------------------
+  本文
+------------------------- */
+
+.card-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh; /*文字写真間*/
+
+  padding-left: var(--content-pad-x);
+  padding-right: var(--content-pad-x);
+  padding-bottom: 5vh;
+}
+
+.card-text {
+  margin: 0 0 5vh 0;
+}
+
+.card-text .body-text {
+  margin: 0 0 0 0;
+}
+.card-text .body-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-photo {
+  margin: 0;
+}
+
+.card-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------
+  DESKTOP用
+------------------------- */
+.card-photo--hero {
+  display: none;
+}
+
+/* -------------------------
+   card-media 横並びバリエーション
+------------------------- */
+
+.card-media--row { /*能*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-media--row img {
+  flex: 1 1 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------
+   card-media 2x2バリエーション
+------------------------- */
+
+.card-media--grid { /*HIIT*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.card-media--grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* -------------------------
+   card-media 3x1バリエーション
+------------------------- */
+
+.card-media--omiya { /*大宮*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-media--grid img {
+  flex: 1 1 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* -------------------------
+  NEXT
+------------------------- */
+
+.card-next {
+  padding-left: var(--content-pad-x);
+  padding-right: var(--content-pad-x);
+}
+
+.card-next img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+.card-next__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  margin: 0 auto;
+  width: fit-content;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-next__label {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(16px, 4vw, 48px);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.card-next__thumb {
+  width: 100%;
+}
+
+
+/* -------------------------
+  DESKTOP
+------------------------- */
+
+@media (min-width: 768px) {
+
+  .card-header {
+    display: flex;
+  }
+
+  .card-hero {
+    display: none;
+  }
+
+  .page-card .site-header.card-header {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: auto;
+  }
+
+  .card-flow {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 6vw;
+    row-gap: 10vh;
+    align-items: start;
+
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+  }
+
+  .card-photo {
+    grid-column: 1;
+  }
+
+  .card-text {
+    grid-column: 2;
+    max-width: 600px;
+  }
+
+  .card-photo--hero {
+    display: block;
+  }
+
+  .card-next {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .card-next__link {
+    gap: 8vw;
+  }
+}

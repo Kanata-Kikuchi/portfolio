@@ -1,0 +1,66 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  overscroll-behavior: none;
+
+  background-color: #fff;
+  background-image: url("../../images/bg/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: var(--bg-size, cover);
+  background-position: 50% calc(var(--bg-pos-y, 50%) - var(--footer-bar-h));
+}
+
+.page {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.site-content {
+  padding-top: calc(var(--title-size) + 48px);
+  padding-left: var(--page-pad-x);
+  padding-right: var(--page-pad-x);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.content__text {
+  align-self: flex-start;
+}
+
+.content__latest {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .site-content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .content {
+    width: 50%;
+    padding-top: 4vh;
+  }
+
+  .page .work-card {
+    max-width: 600px;   /* CARD最大値 */
+  }
+
+  .page .work-card__label-text {
+    font-size: clamp(16px, 4vw, 48px);
+  }
+
+}

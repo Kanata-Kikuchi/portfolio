@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+:root {
+  --page-pad-x: clamp(10px, 3vw, 1000px);
+  --content-pad-x: clamp(60px, 10vw, 1000px);
+  --text-pad-x: clamp(10px, 10vw, 100px);
+
+  --title-size: 9vw;
+  --title-size-card: 15vw;
+
+  --footer-bar-h: calc(12px + 40px + env(safe-area-inset-bottom));
+
+  --footer-box-w: 112px;
+  --footer-box-h: 32px;
+
+  --photo-mar-top: 9vw;
+  --photo-mar-left: 12vw;
+  --photo-mar-bottom: 32vw;
+
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+
+  --bg-shift-x: 0px;
+  --bg-shift-y: 0px;
+}

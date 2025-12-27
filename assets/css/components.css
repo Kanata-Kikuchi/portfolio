@@ -1,0 +1,270 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: var(--safe-top);
+  margin: 0;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.site-header-about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: var(--safe-top);
+  margin: 0;
+  overflow: hidden;
+  z-index: 1000;
+
+  background: #fff;
+}
+
+.site-header__work {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding-top: var(--safe-top);
+
+  margin: 0;
+
+  overflow: hidden;
+  z-index: 1000;
+
+  background: #fff;
+}
+
+.site-title {
+  margin: 0;
+
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+
+  display: block;
+  white-space: nowrap;
+
+  font-size: var(--title-size); /* 9vw */
+  line-height: 1;
+  letter-spacing: 0.25em;
+}
+
+.site-title__work {
+  margin: 0;
+
+  padding-left: 10px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+
+  display: block;
+  white-space: nowrap;
+
+  font-size: var(--title-size); /* 9vw */
+  line-height: 1;
+  letter-spacing: 0.25em;
+}
+
+
+/* -------------------------
+  共通本文
+------------------------- */
+
+.body-text {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+
+/* -------------------------
+  HOME：LATESTWORK
+------------------------- */
+
+.latest-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+}
+
+
+/* -------------------------
+  WORK：CARD
+------------------------- */
+
+.work-card {
+  width: 45vw;
+}
+
+.work-card__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.work-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-card__link {
+  position: relative;
+  display: flex;
+  border: 1.5px solid #000;
+  background: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  color: inherit;
+  min-height: unset;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.work-card__label {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  padding: 0 0.3em 0.4em 0.25em;
+  height: 100%;
+  z-index: 1;
+}
+
+.work-card__label-text {
+  font-size: clamp(16px, 4vw, 80px);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  margin-inline-end: -0.35em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  transform: rotate(180deg);
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.work-card--label-right .work-card__link {
+  justify-content: flex-end;
+}
+
+.work-card--label-right .work-card__label {
+  padding: 0 0.3em 0.4em 0.25em;
+  transform: rotate(180deg);
+}
+
+
+/* -------------------------
+  FOOTER
+------------------------- */
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-bar-h);
+
+  z-index: 1000;
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.site-footer::before {
+  right: 16px; /* カーソルバー分 */
+}
+
+.footer-nav {
+  position: absolute;
+  left: 50%;
+  bottom: calc(12px + var(--safe-bottom));
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.footer-link {
+  width: var(--footer-box-w);
+  height: var(--footer-box-h);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 1;
+
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+}
+
+.footer-link.is-active, .footer-link[aria-current="page"] {
+  font-size: 32px;
+  line-height: 1;
+  transform: translateY(0);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+
+@media (min-width: 768px) {
+  
+  .body-text {
+    font-size: 16px;
+    letter-spacing: 0.12em;
+  }
+}

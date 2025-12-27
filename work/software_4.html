@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOFTWARE</title>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/card.css">
+</head>
+
+<body class="page-card">
+
+  <!-- DESKTOP -->
+  <header class="site-header card-header">
+    <h1 class="site-title card-title">SOFTWARE</h1>
+  </header>
+
+  <main class="card-main">
+
+    <!-- MOBILE -->
+    <section class="card-hero card-hero--left">
+      <div class="card-hero__title-wrap">
+        <span class="card-hero__title">SOFTWARE</span>
+      </div>
+
+      <!-- MOBILE -->
+      <div class="card-hero__media">
+        <img
+          src="../assets/images/software_4/hero.png"
+          alt="mahjong_lite"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <section class="card-flow">
+
+      <!-- DESKTOP -->
+      <figure class="card-photo card-photo--hero">
+        <div class="card-media card-media--hero">
+          <img
+            src="../assets/images/software_4/hero.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          Dart / Flutter / Figma<br><br><br>
+          前作の反省を生かし再設計した点数共有アプリ。<br>
+          前作はその場で実装したい機能を追加した結果、後半に行くにつれ大規模な改善が必要になったことから設計の大事さを実感し、今作のスタートはFigmaでデザインを決めつつ事前に要件を考えた。<br>
+          主な改変は点数共有をメインにしてユーザーの入力数を減らすこと、ソケット通信を実現すること。<br><br>
+          
+          <a
+            class="body-text"
+            href="https://kanata-kikuchi.github.io/mahjong_lite"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            mahjong_lite
+          </a>
+
+          <br>名前とルームIDに「debug」を入力すると動作確認が可能
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/md.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          各ページの遷移図
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/room_create.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/room_join.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/nyusitu.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          ルーム作成or参加ページ<br><br><br>各端末とソケット通信開始するための入室ページ。<br>名前とルールを入力しルームを作成すると、そのプレイヤーは親となりルームIDが発行される。他のプレイヤーは名前とオフラインで共有したルームIDを入力しルームに参加する。
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/hero.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/input_round.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/rule.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          点数共有ページ<br><br><br>各プレイヤーの持ち点、供託・本場、局数、試合数などのゲーム状況を表示するページ。<br>「東3局」をタップするとその局の点数移動を入力できる。入力の権限は試合開始時に親だった人に限る。<br>また中央の試合数をタップすると最初に決めたルールが表示される。
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/syukyoku.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/oyagime.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          点数共有ページ<br><br><br>局が進行し試合が終了すると局表示が「終局」となる。タップするとその試合の結果が表示され、次の試合の場決めを行いゲーム状況がリセットされる。
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/round_table.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/input_revise.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/popup_comment.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          局内容ページ<br><br><br>試合の点数状況を局ごとに確認ができるページ。縦軸は局、横軸は起家順で表示。<br>点数共有ページにて点数移動を入力を間違えた場合、最新の入力のみ修正が可能。コメント付きで再入力をすると、表示には赤い線が引かれ変更理由が確認できる。<br>入力の権限は試合開始時に親だった人に限る。
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/game_table.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/plot_game.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          試合履歴ページ<br><br><br>終局した試合の最終持ち点を確認できるページ。縦軸は試合、横軸は順位で表示。<br>各試合ごとに点数の推移グラフを表示する(未実装)。
+        </p>
+      </div>
+
+      <figure class="card-photo">
+        <div class="card-media">
+          <img
+            src="../assets/images/software_4/total_table.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+          <img
+            src="../assets/images/software_4/popup_total.png"
+            alt="mahjong_lite"
+            loading="lazy"
+          />
+        </div>
+      </figure>
+
+      <div class="card-text">
+        <p class="body-text">
+          集計ページ<br><br><br>最終的なスコアを表示するページ。縦軸は試合、横軸は第1試合起家順で表示。<br>試合履歴ページとは違い、誰が何点持って試合を終局したのかを分かりやすくした。<br>「合計」をタップすると最終的なトータルスコアを表示する。
+        </p>
+      </div>
+
+    </section>
+
+    <!-- NEXT -->
+    <section class="card-next">
+      <a class="card-next__link" href="clientwork_1.html">
+        <div class="card-next__label">NEXT</div>
+        <div class="card-next__thumb">
+          <img
+            src="../assets/images/clientwork_1/hero.jpg"
+            alt="omiya"
+            loading="lazy"
+          />
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer card-footer">
+    <nav class="footer-nav">
+      <a class="footer-link" href="../index.html">HOME</a>
+      <a class="footer-link" href="../work.html">WORK</a>
+      <a class="footer-link" href="../about.html">ABOUT</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
