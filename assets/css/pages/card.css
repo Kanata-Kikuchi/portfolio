@@ -138,10 +138,12 @@
 
   padding-left: var(--content-pad-x);
   padding-right: var(--content-pad-x);
+
 }
 
 .card-text {
-  margin: 0 0 5svh 0;
+  /* margin: 0 0 5svh 0; */
+  margin: 0;
 }
 
 .card-text .body-text {
