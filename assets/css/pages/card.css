@@ -1,6 +1,5 @@
 .page-card {
   min-height: 100vh;
-  min-height: 100svh;
 }
 
 /* 固定footer分の逃げ */
@@ -26,7 +25,7 @@
   align-items: stretch;
   column-gap: 16px;
 
-  padding-top: calc(var(--safe-top) + 5svh);
+  padding-top: calc(var(--safe-top) + 5vh);
   padding-bottom: 6vw;
 }
 
@@ -134,15 +133,15 @@
 .card-flow {
   display: flex;
   flex-direction: column;
-  gap: 4svh; /*文字写真間*/
+  gap: 4vh; /*文字写真間*/
 
   padding-left: var(--content-pad-x);
   padding-right: var(--content-pad-x);
-
+  padding-bottom: 5vh;
 }
 
 .card-text {
-  margin: 0 0 5svh 0;
+  margin: 0 0 5vh 0;
 }
 
 .card-text .body-text {
